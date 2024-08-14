@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: #E5E5E5;
+    --color-texto-escrito: #0A3871;
+    --color-contenedor: #ffffff;
+    --color-secundario: #D8DFE8;
+
+    --fuente-principal: 'Inter', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+}
+
+.header__logo {
+    width: 7.5rem;
+    height: 3rem;
+    margin: 2rem 0 2rem 1rem;
+}
+
+body {
+    background-color: var(--color-primario);
+}
+
+.contenido__principal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+
+.contenedor__texto__usuario {
+    margin: -1rem 0 0 15rem;
+    height: 18rem;
+
+}
+
+.contenedor__mensaje__advertencia {
+    margin-top: 8rem;
+    font-family: var(--fuente-principal);
+    font-size: 0.75rem;
+    gap: 0.5rem;
+    display: flex;
+}
+
+.imagen__advertencia {
+    width: 1rem;
+    height: 1rem;
+}
+
+.textArea {
+    color: var(--color-texto-escrito);
+    border: none;
+    font-family: var(--fuente-principal);
+    font-size: 2rem;
+    background-color: var(--color-primario);
+    resize: none;
+    overflow: hidden;
+    width: 42.5rem;
+    height: 18rem;
+    border: none;
+    outline: none;
+
+}
+
+.contenido__botenes {
+    display: flex;
+    justify-content: space-between;
+    width: 680px;
+    height: auto;
+    gap: 1.5rem;
+}
+
+.boton__encriptar {
+    background: var(--color-texto-escrito);
+    border: 1px solid var(--color-texto-escrito);
+    color: white;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    height: 3.5rem;
+    width: 20.5rem;
+}
+
+.boton__encriptar:hover{
+    background: #648fb9;
+    border: 1px solid #648fb9;
+    cursor: pointer;
+}
+
+.boton__desencriptar {
+    background: var(--color-secundario);
+    border: 1px solid var(--color-texto-escrito);
+    color: var(--color-text);
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    width: 20.5rem;
+    height: 3.5rem;
+}
+
+.boton__desencriptar:hover{
+    background: #648fb9;
+    border: 1px solid #648fb9;
+    color: white;
+    cursor: pointer;
+}
+
+#idTextoUsuario::placeholder {
+    color: var(--color-texto-escrito);
+    font-size: 2rem;
+    font-family: var(--fuente-principal);
+}
+
+.contenedor__resultados {
+    background-color: #ffffff;
+    border-radius: 2rem;
+    border: none;
+    margin: -4.5rem 2.5rem 2.5rem 0;
+    width: 400px;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen__sin__resultados {
+    padding: 193px 32px 32px 32px;
+}
+
+.mensaje__titulo__sin__resultado {
+    font-family: var(--fuente-principal);
+    font-weight: bold;
+    color: #343A40;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 32px 16px 32px;
+    
+}
+
+.mensaje__indicacion__sin__resultado {
+    font-family: var(--fuente-principal);
+    font-weight: normal;
+    color: #495057;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 32px;
+}
+
+.mensaje__resultado{
+    font-family: var(--fuente-principal);
+    padding:  2rem 2rem 2rem 2rem;
+    text-align: left;
+}
+
+.boton__copiar{
+    background: white;
+    border: 1px solid var(--color-texto-escrito);
+    border-radius: 1.5rem;
+    width: 18rem;
+    height: 3.5rem;
+    color: var(--color-texto-escrito);
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-family: var(--fuente-principal);
+}
+
+.boton__copiar:hover{
+    background: #648fb9;
+    border: 1px solid #648fb9;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+
+    .header__logo{
+        width: 7.5rem;
+        height: 3rem;
+        margin: 3rem 0 1rem 1rem;
+    }
+    
+    .contenido__principal {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .contenedor__texto__usuario{
+        width: 100%;
+        height: 80%;
+        padding: 5rem 3rem 0 3rem;
+    }
+    
+    .contenedor__resultados{
+        width: 90%;
+        height: 20%;
+        background-color: white;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--font-inter);
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 4rem 0;
+    }
+
+    .imagen__sin__resultados{
+        display: none;
+    }
+    
+    .mensaje__titulo__sin__resultado{
+        font-size: 1.5rem;
+        color: var(--color-text-gray-500);
+        font-weight: 550;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    
+    .mensaje__indicacion__sin__resultado{
+        font-size: 1rem;
+        color: var(--color-text-gray-400);
+        text-align: center;
+    }
+    
+    .boton__copiar{
+        background: white;
+        border: 1px solid var(--color-text);
+        border-radius: 1.5rem;
+        width: 100%;
+        height: 3.5rem;
+        color: var(--color-text);
+        font-size: 1rem;
+    }
+    
+    .boton__copiar:hover{
+        background: #648fb9;
+        border: 1px solid #648fb9;
+        color: white;
+    }
+
+}

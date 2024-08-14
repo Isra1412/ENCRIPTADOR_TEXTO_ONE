@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador De Texto</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <img class="header__logo" src="assets/logo.png" alt="Logo Alura">
+    </header>
+    <main class="contenido__principal">
+        <section class="contenedor__texto__usuario">
+            <textarea id="idTextoUsuario" class="textArea" placeholder="Ingrese el texto aquí"
+                draggable="false"></textarea>
+            <div class="contenedor__mensaje__advertencia">
+                <img class="imagen__advertencia" src="./assets/icono_admiracion.png" alt="advertencia">
+                <p>Solo letras minúsculas y sin acentos.</p>
+            </div>
+            <div class="contenido__botenes">
+                <button id="btnEncriptar" class="boton__encriptar" onclick="encriptarTexto()">Encriptar</button>
+                <button id="btnDesencriptar" class="boton__desencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+
+
+        </section>
+        <section id="idResultado" class="contenedor__resultados">
+            <img id="idImagenSinResultado" class="imagen__sin__resultados" src="assets/sinresultado.png" alt="Imagen de una persona buscando">
+            <h1 id="idTituloSinResultado" class="mensaje__titulo__sin__resultado">Ningún mensaje fue encontrado</h1>
+            <p id="idMensajeSinResultado" class="mensaje__indicacion__sin__resultado">Ingresa el texto que desees encriptar o desencriptar</p>
+            <p id="idMensajeResultado" class="mensaje__resultado" hidden="true"></p>
+            <button id="btnCopiar" onclick="copiarTexto()" class="boton__copiar" hidden="true">Copiar</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mi challenge Encriptador de Texto - By Israel Pérez Juárez</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
